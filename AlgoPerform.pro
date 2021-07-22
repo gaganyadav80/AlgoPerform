@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -11,15 +11,21 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    sortingwindow.cpp
+    sorting/sortingresult.cpp \
+    sorting/sortingwindow.cpp
 
 HEADERS += \
+    globalvariable.h \
     mainwindow.h \
-    sortingwindow.h
+    sorting/sortingalgo.h \
+    sorting/sortingperform.h \
+    sorting/sortingresult.h \
+    sorting/sortingwindow.h
 
 FORMS += \
     mainwindow.ui \
-    sortingwindow.ui
+    sorting/sortingresult.ui \
+    sorting/sortingwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

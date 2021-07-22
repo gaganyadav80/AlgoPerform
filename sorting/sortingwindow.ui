@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SortingWindow</class>
+ <widget class="QMainWindow" name="SortingWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>410</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="closeButton">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>350</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(246, 97, 81);</string>
+    </property>
+    <property name="text">
+     <string>Close</string>
+    </property>
+   </widget>
+   <widget class="QToolBox" name="toolBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>531</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>3</number>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>529</width>
+       <height>214</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Insertion Sort</string>
+     </attribute>
+     <widget class="QTextBrowser" name="textBrowser_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>491</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Fira Sans Semi-Light'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Time Complexity&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;: O(N&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;), where N is the size of the array.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Algorithm&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','monospace'; font-size:15px; color:rgba(0,0,0,0.894118);&quot;&gt;Step 1: If the current element is 1st element of array, it is already sorted.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','monospace'; font-size:15px; color:rgba(0,0,0,0.894118);&quot;&gt;Step 2: Pick next element&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','monospace'; font-size:15px; color:rgba(0,0,0,0.894118);&quot;&gt;Step 3: Compare the current element will all elements in the sorted sub-array before it.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','monospace'; font-size:15px; color:rgba(0,0,0,0.894118);&quot;&gt;Step 4: Shift all of the elements in the sub-array before the current element which are greater than the current element by one place and insert the current element at the new empty space.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','monospace'; font-size:15px; color:rgba(0,0,0,0.894118);&quot;&gt;Step 5: Repeat step 2-3 until the entire array is sorted.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>529</width>
+       <height>214</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Bubble Sort</string>
+     </attribute>
+     <widget class="QTextBrowser" name="textBrowser_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>491</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Fira Sans Semi-Light'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Time Complexity&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;: O(N&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;), where N is the size of the array.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Algorithm&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#eeeeee;&quot;&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000088;&quot;&gt;begin&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#660066;&quot;&gt;BubbleSort&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#666600;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt;list&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#666600;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#eeeeee;&quot;&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000088;&quot;&gt;for&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt; all elements &lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000088;&quot;&gt;of&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt; list&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#eeeeee;&quot;&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt;      &lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000088;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt; list&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#666600;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt;i&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#666600;&quot;&gt;]&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#666600;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt; list&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#666600;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt;i&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#666600;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#006666;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#666600;&quot;&gt;]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#eeeeee;&quot;&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt;         swap&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#666600;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt;list&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#666600;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt;i&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#666600;&quot;&gt;],&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt; list&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#666600;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt;i&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#666600;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#006666;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#666600;&quot;&gt;])&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#eeeeee;&quot;&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt;      &lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000088;&quot;&gt;end&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000088;&quot;&gt;if&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#eeeeee;&quot;&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000088;&quot;&gt;end&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000088;&quot;&gt;for&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#eeeeee;&quot;&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#eeeeee;&quot;&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000088;&quot;&gt;return&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt; list&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#eeeeee;&quot;&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#eeeeee;&quot;&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000088;&quot;&gt;end&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#000000;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:#660066;&quot;&gt;BubbleSort&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>529</width>
+       <height>214</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Selection Sort</string>
+     </attribute>
+     <widget class="QTextBrowser" name="textBrowser_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>491</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Fira Sans Semi-Light'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Time Complexity&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;: O(N&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;), where N is the size of the array.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Algorithm&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; font-weight:600; color:rgba(0,0,0,0.866667);&quot;&gt;Step 1&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:rgba(0,0,0,0.866667);&quot;&gt; − Set MIN to location 0&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; font-weight:600; color:rgba(0,0,0,0.866667);&quot;&gt;Step 2&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:rgba(0,0,0,0.866667);&quot;&gt; − Search the minimum element in the list&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; font-weight:600; color:rgba(0,0,0,0.866667);&quot;&gt;Step 3&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:rgba(0,0,0,0.866667);&quot;&gt; − Swap with value at location MIN&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; font-weight:600; color:rgba(0,0,0,0.866667);&quot;&gt;Step 4&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:rgba(0,0,0,0.866667);&quot;&gt; − Increment MIN to point to next element&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; font-weight:600; color:rgba(0,0,0,0.866667);&quot;&gt;Step 5&lt;/span&gt;&lt;span style=&quot; font-family:'monospace','monospace'; font-size:15px; color:rgba(0,0,0,0.866667);&quot;&gt; − Repeat until list is sorted&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>529</width>
+       <height>214</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Quick Sort</string>
+     </attribute>
+     <widget class="QTextBrowser" name="textBrowser_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>491</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Fira Sans Semi-Light'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Time Complexity&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Worst Case:&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-weight:600; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;O(N&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; color:rgba(0,0,0,0.839216); background-color:#ffffff; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Average Case: O(nlogn)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Best Case: O(nlogn)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Pivot Algorithm&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;Step 1&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; − Choose the highest index value has pivot&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;Step 2&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; − Take two variables to point left and right of the list excluding pivot&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;Step 3&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; − left points to the low index&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;Step 4&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; − right points to the high&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;Step 5&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; − while value at left is less than pivot move right&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;Step 6&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; − while value at right is greater than pivot move left&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;Step 7&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; − if both step 5 and step 6 does not match swap left and right&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;Step 8&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; − if left ≥ right, the point where they met is new pivot&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'monospace';&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Algorithm&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;Step 1&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; − Make the right-most index value pivot&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;Step 2&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; − partition the array using pivot value&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;Step 3&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; − quicksort left partition recursively&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;Step 4&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; − quicksort right partition recursively&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>529</width>
+       <height>214</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Merge Sort</string>
+     </attribute>
+     <widget class="QTextBrowser" name="textBrowser_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>491</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Fira Sans Semi-Light'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Time Complexity: &lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;O(nlogn)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'monospace';&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Algorithm&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;MergeSort(arr[], l,  r)&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt;&lt;br /&gt;If r &amp;gt; l&lt;br /&gt;     &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;1. &lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt;Find the middle point to divide the array into two halves:  &lt;br /&gt;             middle m = (l+r)/2&lt;br /&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt; 2. &lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt;Call mergeSort for first half:   &lt;br /&gt;             Call mergeSort(arr, l, m)&lt;br /&gt;     &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;3.&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; Call mergeSort for second half:&lt;br /&gt;             Call mergeSort(arr, m+1, r)&lt;br /&gt;     &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;4. &lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt;Merge the two halves sorted in step 2 and 3:&lt;br /&gt;             Call merge(arr, l, m, r)&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="startButton">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>310</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(143, 240, 164);</string>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>80</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Array Size&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>130</y>
+      <width>106</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>10^3</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_2">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>160</y>
+      <width>106</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>10^4</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_3">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>190</y>
+      <width>106</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>64*(10^5)</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_4">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>220</y>
+      <width>106</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>13*(10^6)</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

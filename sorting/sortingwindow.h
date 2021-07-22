@@ -1,6 +1,8 @@
 #ifndef SORTINGWINDOW_H
 #define SORTINGWINDOW_H
 
+#include "sortingresult.h"
+
 #include <QMainWindow>
 
 namespace Ui {
@@ -18,8 +20,11 @@ public:
 private slots:
     void on_closeButton_clicked();
 
+    void on_startButton_clicked();
+
 private:
     Ui::SortingWindow *ui;
+    SortingResult *sortingResult;
 };
 
 #endif // SORTINGWINDOW_H
