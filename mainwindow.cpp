@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "sortingwindow.h"
+#include "sorting/sortingwindow.h"
 
 #include <QUrl>
 #include <QDesktopServices>

@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "sortingwindow.h"
+#include "sorting/sortingwindow.h"
 
 #include <QMainWindow>
 

@@ -12,11 +12,15 @@ class Variables {
 
    // Private constructor so that no objects can be created.
    Variables() {
-      size = 10000;
+      size = 1000;
+      this -> fillArray();
+   }
 
-      arr.resize(size);
-      auto f = [this]() -> int { return rand() % size; };
-      generate(arr.begin(), arr.end(), f);
+   void fillArray() {
+       if(!arr.empty()) arr.clear();
+       arr.resize(size);
+       auto f = [this]() -> int { return rand() % size + 1; };
+       generate(arr.begin(), arr.end(), f);
    }
 
    public:
@@ -31,11 +35,13 @@ class Variables {
    }
 
    int getSize() {
-      return this -> size;
+       return this -> size;
    }
 
    void setSize(int data) {
-      this -> size = data;
+       this -> size = data;
+       this -> fillArray();
+       cout<<"Array filled with new size of "<<size<<endl;
    }
 };
 

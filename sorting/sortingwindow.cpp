@@ -26,20 +26,52 @@ void SortingWindow::on_closeButton_clicked()
     this->close();
 }
 
-QChartView* generateSortingResultChart(unordered_map<string, int> map, int size);
+
+void SortingWindow::on_radio10_3_clicked()
+{
+    Variables *var = Variables::getInstance();
+    var->setSize(1000);
+}
+
+
+void SortingWindow::on_radio10_4_clicked()
+{
+    Variables *var = Variables::getInstance();
+    var->setSize(10000);
+}
+
+
+void SortingWindow::on_radio22_10_4_clicked()
+{
+    Variables *var = Variables::getInstance();
+    var->setSize(2.2*10000);
+}
+
+
+void SortingWindow::on_radio34_10_4_clicked()
+{
+    Variables *var = Variables::getInstance();
+    var->setSize(3.4*10000);
+}
+
+QChartView* generateSortingResultChart(unordered_map<string, int> map);
 
 void SortingWindow::on_startButton_clicked()
 {
-    unordered_map<string, int> results = execSortingPerform(10000);
-    cout<<endl<<"generating chart"<<endl;
-    QChartView* chartView = generateSortingResultChart(results, 10000);
+    SortingDialog *dialog =new SortingDialog();
+    dialog->show();
 
+    unordered_map<string, int> results = execSortingPerform();
+    cout<<endl<<"generating chart"<<endl;
+    QChartView* chartView = generateSortingResultChart(results);
+
+    dialog->close();
     sortingResult =new SortingResult(this);
     sortingResult->setCentralWidget(chartView);
     sortingResult->show();
 }
 
-QChartView* generateSortingResultChart(unordered_map<string, int> umap, int size) {
+QChartView* generateSortingResultChart(unordered_map<string, int> umap) {
     QBarSet *set0 = new QBarSet("Insertion Sort");
     QBarSet *set1 = new QBarSet("Bubble Sort");
     QBarSet *set2 = new QBarSet("Selection Sort");
@@ -73,8 +105,10 @@ QChartView* generateSortingResultChart(unordered_map<string, int> umap, int size
 //   chart->addAxis(axisX, Qt::AlignBottom);
 //   series->attachAxis(axisX);
 
+    Variables *var = Variables::getInstance();
+
     QValueAxis *axisY = new QValueAxis();
-    axisY->setRange(0, 70*size);
+    axisY->setRange(0, 100*var->getSize());
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisY);
 

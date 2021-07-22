@@ -275,12 +275,12 @@ p, li { white-space: pre-wrap; }
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Array Size&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton">
+   <widget class="QRadioButton" name="radio10_3">
     <property name="geometry">
      <rect>
       <x>570</x>
       <y>130</y>
-      <width>106</width>
+      <width>111</width>
       <height>23</height>
      </rect>
     </property>
@@ -291,12 +291,12 @@ p, li { white-space: pre-wrap; }
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_2">
+   <widget class="QRadioButton" name="radio10_4">
     <property name="geometry">
      <rect>
       <x>570</x>
       <y>160</y>
-      <width>106</width>
+      <width>111</width>
       <height>23</height>
      </rect>
     </property>
@@ -304,34 +304,33 @@ p, li { white-space: pre-wrap; }
      <string>10^4</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_3">
+   <widget class="QRadioButton" name="radio22_10_4">
     <property name="geometry">
      <rect>
       <x>570</x>
       <y>190</y>
-      <width>106</width>
+      <width>111</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>64*(10^5)</string>
+     <string>2.2*(10^4)</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_4">
+   <widget class="QRadioButton" name="radio34_10_4">
     <property name="geometry">
      <rect>
       <x>570</x>
       <y>220</y>
-      <width>106</width>
+      <width>111</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>13*(10^6)</string>
+     <string>3.4*(10^4)</string>
     </property>
    </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

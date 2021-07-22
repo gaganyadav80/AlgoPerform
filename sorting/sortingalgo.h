@@ -2,12 +2,13 @@
 #define SORTINGALGO_H
 
 #include <bits/stdc++.h>
+using namespace std;
 
-void swap(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
+//void swap(int *a, int *b) {
+//    int temp = *a;
+//    *a = *b;
+//    *b = temp;
+//}
 
 void insertionSort(std::vector<int> arr, int n) {
     int i, key, j;
@@ -28,7 +29,7 @@ void bubbleSort(std::vector<int> arr, int n) {
    for (i = 0; i < n-1; i++)
        for (j = 0; j < n-i-1; j++)
            if (arr[j] > arr[j+1])
-              swap(&arr[j], &arr[j+1]);
+               swap(arr[j], arr[j+1]);
 }
 
 void selectionSort(std::vector<int> arr, int n) {
@@ -40,7 +41,7 @@ void selectionSort(std::vector<int> arr, int n) {
           if (arr[j] < arr[min_idx])
             min_idx = j;
 
-        swap(&arr[min_idx], &arr[i]);
+        swap(arr[min_idx], arr[i]);
     }
 }
 
@@ -53,11 +54,11 @@ int partition (std::vector<int> arr, int low, int high) {
     for (int j = low; j <= high- 1; j++) {
         if (arr[j] <= pivot) {
             i++;
-            swap(&arr[i], &arr[j]);
+            swap(arr[i], arr[j]);
         }
     }
 
-    swap(&arr[i + 1], &arr[high]);
+    swap(arr[i + 1], arr[high]);
     return (i + 1);
 }
 
