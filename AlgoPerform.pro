@@ -11,7 +11,6 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    sorting/sortingdialog.cpp \
     sorting/sortingresult.cpp \
     sorting/sortingwindow.cpp
 
@@ -19,14 +18,12 @@ HEADERS += \
     globalvariable.h \
     mainwindow.h \
     sorting/sortingalgo.h \
-    sorting/sortingdialog.h \
     sorting/sortingperform.h \
     sorting/sortingresult.h \
     sorting/sortingwindow.h
 
 FORMS += \
     mainwindow.ui \
-    sorting/sortingdialog.ui \
     sorting/sortingresult.ui \
     sorting/sortingwindow.ui
 

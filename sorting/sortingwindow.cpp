@@ -58,14 +58,10 @@ QChartView* generateSortingResultChart(unordered_map<string, int> map);
 
 void SortingWindow::on_startButton_clicked()
 {
-    SortingDialog *dialog =new SortingDialog();
-    dialog->show();
-
     unordered_map<string, int> results = execSortingPerform();
     cout<<endl<<"generating chart"<<endl;
     QChartView* chartView = generateSortingResultChart(results);
 
-    dialog->close();
     sortingResult =new SortingResult(this);
     sortingResult->setCentralWidget(chartView);
     sortingResult->show();

@@ -2,7 +2,6 @@
 #define SORTINGWINDOW_H
 
 #include "sortingresult.h"
-#include "sortingdialog.h"
 
 #include <QMainWindow>
 

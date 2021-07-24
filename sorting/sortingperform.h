@@ -3,7 +3,6 @@
 
 #include "sortingalgo.h"
 #include "globalvariable.h"
-#include "sortingdialog.h"
 
 #include <chrono>
 #include <iostream>
