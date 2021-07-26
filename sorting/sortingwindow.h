@@ -22,14 +22,6 @@ private slots:
 
     void on_startButton_clicked();
 
-    void on_radio10_3_clicked();
-
-    void on_radio10_4_clicked();
-
-    void on_radio22_10_4_clicked();
-
-    void on_radio34_10_4_clicked();
-
 private:
     Ui::SortingWindow *ui;
     SortingResult *sortingResult;

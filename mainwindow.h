@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include "sorting/sortingwindow.h"
+#include "searching/searchingwindow.h"
 
 #include <QMainWindow>
 
@@ -22,8 +23,21 @@ private slots:
 
     void on_sortingButton_clicked();
 
+    void on_searchingButton_clicked();
+
+    void on_radio10_3_clicked();
+
+    void on_radio10_4_clicked();
+
+    void on_radio22_10_4_clicked();
+
+    void on_radio34_10_4_clicked();
+
+    void on_spinBox_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
     SortingWindow *sorting;
+    SearchingWindow *searching;
 };
 #endif // MAINWINDOW_H

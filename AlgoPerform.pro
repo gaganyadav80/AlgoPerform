@@ -9,21 +9,37 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    insertion/insertionresult.cpp \
+    insertion/insertionwindow.cpp \
     main.cpp \
     mainwindow.cpp \
+    searching/searchingresult.cpp \
+    searching/searchingwindow.cpp \
     sorting/sortingresult.cpp \
     sorting/sortingwindow.cpp
 
 HEADERS += \
     globalvariable.h \
+    insertion/insertionalgo.h \
+    insertion/insertionperform.h \
+    insertion/insertionresult.h \
+    insertion/insertionwindow.h \
     mainwindow.h \
+    searching/searchingalgo.h \
+    searching/searchingperform.h \
+    searching/searchingresult.h \
+    searching/searchingwindow.h \
     sorting/sortingalgo.h \
     sorting/sortingperform.h \
     sorting/sortingresult.h \
     sorting/sortingwindow.h
 
 FORMS += \
+    insertion/insertionresult.ui \
+    insertion/insertionwindow.ui \
     mainwindow.ui \
+    searching/searchingresult.ui \
+    searching/searchingwindow.ui \
     sorting/sortingresult.ui \
     sorting/sortingwindow.ui
 

@@ -7,18 +7,18 @@
     <x>0</x>
     <y>0</y>
     <width>700</width>
-    <height>410</height>
+    <height>450</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Sorting Section</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="closeButton">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>350</y>
+      <x>460</x>
+      <y>10</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -34,9 +34,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
-      <width>531</width>
-      <height>371</height>
+      <y>60</y>
+      <width>681</width>
+      <height>381</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -56,8 +56,8 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>529</width>
-       <height>214</height>
+       <width>679</width>
+       <height>224</height>
       </rect>
      </property>
      <attribute name="label">
@@ -68,8 +68,8 @@
        <rect>
         <x>10</x>
         <y>0</y>
-        <width>491</width>
-        <height>221</height>
+        <width>621</width>
+        <height>231</height>
        </rect>
       </property>
       <property name="html">
@@ -92,8 +92,8 @@ p, li { white-space: pre-wrap; }
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>529</width>
-       <height>214</height>
+       <width>679</width>
+       <height>224</height>
       </rect>
      </property>
      <attribute name="label">
@@ -104,8 +104,8 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>10</x>
         <y>0</y>
-        <width>491</width>
-        <height>221</height>
+        <width>621</width>
+        <height>231</height>
        </rect>
       </property>
       <property name="html">
@@ -133,8 +133,8 @@ p, li { white-space: pre-wrap; }
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>529</width>
-       <height>214</height>
+       <width>679</width>
+       <height>224</height>
       </rect>
      </property>
      <attribute name="label">
@@ -145,8 +145,8 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>10</x>
         <y>0</y>
-        <width>491</width>
-        <height>221</height>
+        <width>621</width>
+        <height>231</height>
        </rect>
       </property>
       <property name="html">
@@ -169,8 +169,8 @@ p, li { white-space: pre-wrap; }
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>529</width>
-       <height>214</height>
+       <width>679</width>
+       <height>224</height>
       </rect>
      </property>
      <attribute name="label">
@@ -181,8 +181,8 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>10</x>
         <y>0</y>
-        <width>491</width>
-        <height>221</height>
+        <width>621</width>
+        <height>231</height>
        </rect>
       </property>
       <property name="html">
@@ -217,8 +217,8 @@ p, li { white-space: pre-wrap; }
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>529</width>
-       <height>214</height>
+       <width>679</width>
+       <height>224</height>
       </rect>
      </property>
      <attribute name="label">
@@ -229,8 +229,8 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>10</x>
         <y>0</y>
-        <width>491</width>
-        <height>211</height>
+        <width>621</width>
+        <height>221</height>
        </rect>
       </property>
       <property name="html">
@@ -249,8 +249,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="startButton">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>310</y>
+      <x>580</x>
+      <y>10</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -262,72 +262,17 @@ p, li { white-space: pre-wrap; }
      <string>Start</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>80</y>
-      <width>141</width>
-      <height>21</height>
+      <x>10</x>
+      <y>10</y>
+      <width>421</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Array Size&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="radio10_3">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>130</y>
-      <width>111</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>10^3</string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="radio10_4">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>160</y>
-      <width>111</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>10^4</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="radio22_10_4">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>190</y>
-      <width>111</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>2.2*(10^4)</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="radio34_10_4">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>220</y>
-      <width>111</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>3.4*(10^4)</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;SORTING&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>

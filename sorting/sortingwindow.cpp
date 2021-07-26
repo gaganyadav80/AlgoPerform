@@ -1,11 +1,9 @@
 #include "sortingwindow.h"
 #include "ui_sortingwindow.h"
-#include "sorting/sortingperform.h"
-#include "sortingresult.h"
+#include "sortingperform.h"
 
 #include <QtCharts>
 #include <bits/stdc++.h>
-#include <unistd.h>
 
 using namespace std;
 
@@ -27,39 +25,12 @@ void SortingWindow::on_closeButton_clicked()
 }
 
 
-void SortingWindow::on_radio10_3_clicked()
-{
-    Variables *var = Variables::getInstance();
-    var->setSize(1000);
-}
-
-
-void SortingWindow::on_radio10_4_clicked()
-{
-    Variables *var = Variables::getInstance();
-    var->setSize(10000);
-}
-
-
-void SortingWindow::on_radio22_10_4_clicked()
-{
-    Variables *var = Variables::getInstance();
-    var->setSize(2.2*10000);
-}
-
-
-void SortingWindow::on_radio34_10_4_clicked()
-{
-    Variables *var = Variables::getInstance();
-    var->setSize(3.4*10000);
-}
-
 QChartView* generateSortingResultChart(unordered_map<string, int> map);
 
 void SortingWindow::on_startButton_clicked()
 {
     unordered_map<string, int> results = execSortingPerform();
-    cout<<endl<<"generating chart"<<endl;
+    cout<<endl<<"generating sorting chart"<<endl;
     QChartView* chartView = generateSortingResultChart(results);
 
     sortingResult =new SortingResult(this);

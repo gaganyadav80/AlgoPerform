@@ -4,12 +4,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//void swap(int *a, int *b) {
-//    int temp = *a;
-//    *a = *b;
-//    *b = temp;
-//}
-
 void insertionSort(std::vector<int> arr, int n) {
     int i, key, j;
     for (i = 1; i < n; i++) {

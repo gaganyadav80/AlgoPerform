@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SearchingWindow</class>
+ <widget class="QMainWindow" name="SearchingWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Searching Section</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>661</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <property name="usesScrollButtons">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Array</string>
+     </attribute>
+     <widget class="QToolBox" name="toolBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>660</width>
+        <height>360</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_0">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>658</width>
+         <height>265</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Linear search</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QTextBrowser" name="textBrowser_2">
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Fira Sans Semi-Light'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Time Complexity&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;: O(N)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Algorithm&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;: &lt;/span&gt;&lt;/p&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px;&quot;&gt;Start from the leftmost element of arr[] and one by one compare X with each element of arr[].&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px;&quot;&gt;If X matches with an element, return the index.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px;&quot;&gt;If X doesn’t match with any of elements and end of the array is reached, return -1.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_1">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>658</width>
+         <height>265</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Binary Search</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QTextBrowser" name="textBrowser_3">
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Fira Sans Semi-Light'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Time Complexity&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;: O(Log N)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:600; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Note: &lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Requires a sorted array. We will first sort the array and then perform Binary Search and performace will be calculated for both these operations.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Algorithm&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;: We basically ignore half of the elements just after one comparison. &lt;/span&gt;&lt;/p&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px;&quot;&gt;Compare X with the middle element of the array.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px;&quot;&gt;If X matches with middle element, we return the mid index.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px;&quot;&gt;Else If X is greater than the mid element, then X can only lie in right half subarray after the mid element. So we will now look for X in only the right half ignoring the complete left half.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px;&quot;&gt;Else if X is smaller, search for X in the left half ignoring the right half.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>658</width>
+         <height>265</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Ternary Search</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QTextBrowser" name="textBrowser_4">
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Fira Sans Semi-Light'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Time Complexity&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;: O(Log&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:12px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;N)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:11pt; font-weight:600; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Note: &lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:11pt; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Requires a sorted array. We will first sort the array and then perform Binary Search and performace will be calculated for both these operations.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Algorithm:&lt;/span&gt;&lt;/p&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px;&quot;&gt;First, we compare the key with the element at mid1. If found equal, we return mid1.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px;&quot;&gt;If not, then we compare the key with the element at mid2. If found equal, we return mid2.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px;&quot;&gt;If not, then we check whether the key is less than the element at mid1. If yes, then recur to the first part.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px;&quot;&gt;If not, then we check whether the key is greater than the element at mid2. If yes, then recur to the third part.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px;&quot;&gt;If not, then we recur to the second (middle) part.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Trees</string>
+     </attribute>
+     <widget class="QToolBox" name="toolBox_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>660</width>
+        <height>360</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>658</width>
+         <height>327</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Binary Search Tree</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QTextBrowser" name="textBrowser_5">
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Fira Sans Semi-Light'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Time Complexity&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'droid sans mono','inconsolata','menlo','consolas','bitstream vera sans mono','courier','monospace'; font-size:11pt; color:#000000; background-color:#f9fafc;&quot;&gt;O(log(n))&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;, where N is the size of the array.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Algorithm&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;    If root == NULL &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;	return NULL;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;    If number == root-&amp;gt;data &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;	return root-&amp;gt;data;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;    If number &amp;lt; root-&amp;gt;data &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;    	return search(root-&amp;gt;left)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;    If number &amp;gt; root-&amp;gt;data &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;    	return search(root-&amp;gt;right)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="startButton">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>10</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(143, 240, 164);</string>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closeButton">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>10</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(246, 97, 81);</string>
+    </property>
+    <property name="text">
+     <string>Close</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>171</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;SEARCHING&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

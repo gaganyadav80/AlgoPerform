@@ -11,14 +11,14 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>AlgoPerform</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="sortingButton">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>60</y>
+      <y>20</y>
       <width>181</width>
       <height>41</height>
      </rect>
@@ -27,11 +27,11 @@
      <string>Sorting Algorithms</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="searchButton">
+   <widget class="QPushButton" name="searchingButton">
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>60</y>
+      <y>20</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -44,7 +44,7 @@
     <property name="geometry">
      <rect>
       <x>480</x>
-      <y>60</y>
+      <y>20</y>
       <width>181</width>
       <height>41</height>
      </rect>
@@ -57,7 +57,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>150</y>
+      <y>90</y>
       <width>181</width>
       <height>41</height>
      </rect>
@@ -70,7 +70,7 @@
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>150</y>
+      <y>90</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -83,7 +83,7 @@
     <property name="geometry">
      <rect>
       <x>480</x>
-      <y>150</y>
+      <y>90</y>
       <width>181</width>
       <height>41</height>
      </rect>
@@ -95,10 +95,10 @@
    <widget class="QLabel" name="Branding">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>220</y>
-      <width>411</width>
-      <height>131</height>
+      <x>30</x>
+      <y>160</y>
+      <width>341</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -111,14 +111,134 @@
    <widget class="QPushButton" name="githubButton">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>360</y>
-      <width>151</width>
+      <x>480</x>
+      <y>180</y>
+      <width>181</width>
       <height>25</height>
      </rect>
     </property>
     <property name="text">
      <string>GitHub Repository</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio22_10_4">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>340</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>2.2*(10^4)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sizeLabel">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>240</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Array Size&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio34_10_4">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>370</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>3.4*(10^4)</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio10_4">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>310</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>10^4</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio10_3">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>280</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>10^3</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sizeLabel_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>240</y>
+      <width>311</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Element to Search,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Insert or Delete&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>320</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>34000</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>360</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;value &amp;lt; Array Size&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>380</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;for better results&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>

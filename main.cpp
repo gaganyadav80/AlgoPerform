@@ -1,6 +1,9 @@
 #include "mainwindow.h"
+#include "globalvariable.h"
 
 #include <QApplication>
+
+Variables *Variables::instance = 0;
 
 int main(int argc, char *argv[])
 {
