@@ -64,7 +64,7 @@ int ternarySearch(vector<int> arr, int key)
 }
 
 // BINARY SEARCH TREE
-int bstSearch(Node *root, int x) {
+int bstSearch(BTree *root, int x) {
     while(root!=NULL) {
         if(root->key == x)
             return 1;
@@ -72,6 +72,21 @@ int bstSearch(Node *root, int x) {
             root=root->right;
         else
             root=root->left;
+    }
+    return -1;
+}
+
+// LINKED LISTS
+int listSearch(LList * head, int x){
+    int pos=1;
+    LList *curr=head;
+    while(curr!=NULL){
+        if(curr->data==x)
+            return pos;
+        else{
+            pos++;
+            curr=curr->next;
+        }
     }
     return -1;
 }

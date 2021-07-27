@@ -42,22 +42,24 @@ QChartView* generateSearchingResultChart(unordered_map<string, int> searchMap) {
     QBarSet *set1 = new QBarSet("Binary Search");
     QBarSet *set2 = new QBarSet("Ternary Search");
     QBarSet *set3 = new QBarSet("BST Search");
+    QBarSet *set4 = new QBarSet("Linked List Search");
 
-    cout<<"Linear Search  "<<searchMap["linear"]<<endl;
-    cout<<"Binary Search  "<<searchMap["binary"]<<endl;
-    cout<<"Ternary Search "<<searchMap["ternary"]<<endl;
-    cout<<"BST Search     "<<searchMap["bst"]<<endl;
+    cout<<"Searching Results = "<<searchMap["linear"]<<" "<<searchMap["binary"]<<" "<<searchMap["ternary"];
+    cout<<" "<<searchMap["bst"]<<" "<<searchMap["llist"]<<endl;
 
     *set0 << searchMap["linear"];
     *set1 << searchMap["binary"];
     *set2 << searchMap["ternary"];
     *set3 << searchMap["bst"];
+    *set4 << searchMap["llist"];
 
     QBarSeries *series = new QBarSeries();
+    series->setLabelsVisible(true);
     series->append(set0);
     series->append(set1);
     series->append(set2);
     series->append(set3);
+    series->append(set4);
 
     QChart *chart = new QChart();
     chart->addSeries(series);

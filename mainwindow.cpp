@@ -62,3 +62,10 @@ void MainWindow::on_searchingButton_clicked()
     searching->show();
 }
 
+
+void MainWindow::on_insertionButton_clicked()
+{
+    insertion =new InsertionWindow(this);
+    insertion->show();
+}
+

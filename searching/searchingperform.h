@@ -15,7 +15,7 @@ unordered_map<string, int> execSearchingPerform() {
 
     //Array linear search execution time
     auto timerStart = high_resolution_clock::now();
-    int x = linearSearch(var->getArray(), var->getElement());
+    linearSearch(var->getArray(), var->getElement());
     auto timerStop = high_resolution_clock::now();
     auto timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     searchingResults["linear"] = abs(timerDuration.count());
@@ -23,7 +23,7 @@ unordered_map<string, int> execSearchingPerform() {
 
     //Array binary search execution time
     timerStart = high_resolution_clock::now();
-    x = binarySearch(var->getArray(), var->getElement());
+    binarySearch(var->getArray(), var->getElement());
     timerStop = high_resolution_clock::now();
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     searchingResults["binary"] = abs(timerDuration.count());
@@ -31,19 +31,27 @@ unordered_map<string, int> execSearchingPerform() {
 
     //Array ternary search execution time
     timerStart = high_resolution_clock::now();
-    x = ternarySearch(var->getArray(), var->getElement());
+    ternarySearch(var->getArray(), var->getElement());
     timerStop = high_resolution_clock::now();
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     searchingResults["ternary"] = abs(timerDuration.count());
     cout<<"Array ternary search done"<<endl;
 
-    //Binary search  tree execution time
+    //Binary search tree execution time
     timerStart = high_resolution_clock::now();
-    x = bstSearch(var->getBstRoot(), var->getElement());
+    bstSearch(var->getBstRoot(), var->getElement());
     timerStop = high_resolution_clock::now();
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     searchingResults["bst"] = abs(timerDuration.count());
     cout<<"Binary search tree done"<<endl;
+
+    //Linked List search execution time
+    timerStart = high_resolution_clock::now();
+    listSearch(var->getListRoot(), var->getElement());
+    timerStop = high_resolution_clock::now();
+    timerDuration = duration_cast<microseconds>(timerStart - timerStop);
+    searchingResults["llist"] = abs(timerDuration.count());
+    cout<<"Linked list search done"<<endl;
 
     return searchingResults;
 }

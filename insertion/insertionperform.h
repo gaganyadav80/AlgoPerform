@@ -13,37 +13,29 @@ unordered_map<string, int> execInsertionPerform() {
     Variables *var = Variables::getInstance();
     unordered_map<string, int> insertionResults;
 
-    //Array linear search execution time
+    //Array insertion at given index execution time
     auto timerStart = high_resolution_clock::now();
-    int x = linearSearch(var->getArray(), var->getElement());
+    insertArray(var->getArray(), var->getElement(), var->getIndex());
     auto timerStop = high_resolution_clock::now();
     auto timerDuration = duration_cast<microseconds>(timerStart - timerStop);
-    insertionResults["linear"] = abs(timerDuration.count());
-    cout<<"\nArray linear search done"<<endl;
+    insertionResults["instarray"] = abs(timerDuration.count());
+    cout<<"\nArray insertion done"<<endl;
 
-    //Array binary search execution time
+    //Linked list insertion at end execution time
     timerStart = high_resolution_clock::now();
-    x = binarySearch(var->getArray(), var->getElement());
+    insertLList(var->getListRoot(), var->getElement());
     timerStop = high_resolution_clock::now();
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
-    insertionResults["binary"] = abs(timerDuration.count());
-    cout<<"Array binary search done"<<endl;
+    insertionResults["instllist"] = abs(timerDuration.count());
+    cout<<"Linked List done"<<endl;
 
-    //Array ternary search execution time
+    //Binary tree insertion execution time
     timerStart = high_resolution_clock::now();
-    x = ternarySearch(var->getArray(), var->getElement());
+    insertBst(var->getBstRoot(), var->getElement());
     timerStop = high_resolution_clock::now();
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
-    insertionResults["ternary"] = abs(timerDuration.count());
-    cout<<"Array ternary search done"<<endl;
-
-    //Binary search  tree execution time
-    timerStart = high_resolution_clock::now();
-    x = bstSearch(var->getBstRoot(), var->getElement());
-    timerStop = high_resolution_clock::now();
-    timerDuration = duration_cast<microseconds>(timerStart - timerStop);
-    insertionResults["bst"] = abs(timerDuration.count());
-    cout<<"Binary search tree done"<<endl;
+    insertionResults["instbst"] = abs(timerDuration.count());
+    cout<<"Binary Tree insertion done"<<endl;
 
     return insertionResults;
 }

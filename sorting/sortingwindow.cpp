@@ -45,7 +45,8 @@ QChartView* generateSortingResultChart(unordered_map<string, int> umap) {
     QBarSet *set3 = new QBarSet("Quick Sort");
     QBarSet *set4 = new QBarSet("Merge Sort");
 
-    cout<<umap["insertion"]<<" "<<umap["bubble"]<<" "<<umap["selection"]<<" "<<umap["quick"]<<" "<<umap["merge"]<<endl;
+    cout<<"Sorting Results = "<<umap["insertion"]<<" "<<umap["bubble"]<<" "<<umap["selection"]<<" ";
+    cout<<umap["quick"]<<" "<<umap["merge"]<<endl;
 
     *set0 << umap["insertion"];
     *set1 << umap["bubble"];
@@ -54,6 +55,7 @@ QChartView* generateSortingResultChart(unordered_map<string, int> umap) {
     *set4 << umap["merge"];
 
     QBarSeries *series = new QBarSeries();
+    series->setLabelsVisible(true);
     series->append(set0);
     series->append(set1);
     series->append(set2);

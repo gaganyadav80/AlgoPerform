@@ -3,6 +3,7 @@
 
 #include "sorting/sortingwindow.h"
 #include "searching/searchingwindow.h"
+#include "insertion/insertionwindow.h"
 
 #include <QMainWindow>
 
@@ -35,9 +36,12 @@ private slots:
 
     void on_spinBox_valueChanged(int arg1);
 
+    void on_insertionButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     SortingWindow *sorting;
     SearchingWindow *searching;
+    InsertionWindow *insertion;
 };
 #endif // MAINWINDOW_H

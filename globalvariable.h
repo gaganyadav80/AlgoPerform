@@ -5,13 +5,23 @@
 
 using namespace std;
 
-struct Node {
+struct BTree {
   int key;
-  struct Node *left;
-  struct Node *right;
-  Node(int k){
+  struct BTree *left;
+  struct BTree *right;
+  BTree(int k){
       key=k;
       left=right=NULL;
+  }
+};
+
+struct LList
+{
+  int data;
+  struct LList *next;
+  LList(int k) {
+      data=k;
+      next=NULL;
   }
 };
 
@@ -20,16 +30,20 @@ class Variables {
    static Variables *instance;
    int size;
    int element;
+   int index;
    vector<int> arr;
-   Node *bstroot;
+   BTree *bstroot;
+   LList *listroot;
 
    // Private constructor so that no objects can be created.
    Variables() {
       srand(time(0));
       size = 1000;
       element = rand() % 1000;
-      this -> fillArray();
-      this -> fillBST();
+      index = rand() % 1000 + 3;
+      fillArray();
+      fillBST();
+      fillLList();
    }
 
    void fillArray() {
@@ -39,9 +53,9 @@ class Variables {
        generate(arr.begin(), arr.end(), f);
    }
 
-   Node* bstInsert(Node *root, int x) {
-       Node *temp=new Node(x);
-       Node *parent=NULL,*curr=root;
+   void bstInsert(BTree *root, int x) {
+       BTree *temp=new BTree(x);
+       BTree *parent=NULL,*curr=root;
        while(curr!=NULL){
            parent=curr;
            if(curr->key>x)
@@ -49,22 +63,32 @@ class Variables {
            else if(curr->key<x)
                curr=curr->right;
            else
-               return root;
+               return;
        }
-       if(parent==NULL)
-           return temp;
+
        if(parent->key>x)
            parent->left=temp;
        else
            parent->right=temp;
-       return root;
+       return;
    }
 
    void fillBST() {
-       bstroot =new Node(arr[0]);
+       bstroot =new BTree(arr[0]);
        int n = arr.size();
        for(int i=1; i<n; i++) {
-           bstroot = bstInsert(bstroot, arr[i]);
+           bstInsert(bstroot, arr[i]);
+       }
+   }
+
+   void fillLList() {
+       listroot =new LList(arr[0]);
+       int n = arr.size();
+       struct LList *last = listroot;
+       for(int i=1; i<n; i++) {
+           LList* new_node = new LList(arr[i]);
+           last->next = new_node;
+           last = new_node;
        }
    }
 
@@ -76,32 +100,42 @@ class Variables {
    }
 
    vector<int> getArray() {
-       return this -> arr;
+       return this->arr;
    }
 
    int getSize() {
-       return this -> size;
+       return this->size;
    }
 
    void setSize(int s) {
-       this -> size = s;
-       this -> fillArray();
-       this -> fillBST();
+       size = s;
+       index = rand() % s + 3;
+       fillArray();
+       fillBST();
+       fillLList();
        cout<<"\nRoot node value "<<bstroot->key<<endl;
        cout<<"Array filled with new size of "<<size<<endl;
        cout<<"Binary Tree filled with new size of "<<size<<endl<<endl;
    }
 
    int getElement() {
-       return this->element;
+       return element;
    }
    void setElement(int e) {
-       this->element = e;
+       element = e;
        cout<<"New element to be searched is "<<element<<endl;
    }
 
-   Node* getBstRoot() {
-       return this->bstroot;
+   int getIndex() {
+       return index;
+   }
+
+   BTree* getBstRoot() {
+       return bstroot;
+   }
+
+   LList* getListRoot() {
+       return listroot;
    }
 };
 
