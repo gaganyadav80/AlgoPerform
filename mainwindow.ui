@@ -66,7 +66,7 @@
      <string>Element Deletion</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="treesButton">
+   <widget class="QPushButton" name="visualButton">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -76,7 +76,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Trees Algorithms</string>
+     <string>Visualisation</string>
     </property>
    </widget>
    <widget class="QPushButton" name="dsaButton">
@@ -85,11 +85,11 @@
       <x>480</x>
       <y>90</y>
       <width>181</width>
-      <height>41</height>
+      <height>25</height>
      </rect>
     </property>
     <property name="text">
-     <string>All Data Sturctures</string>
+     <string>Link to the course</string>
     </property>
    </widget>
    <widget class="QLabel" name="Branding">
@@ -112,7 +112,7 @@
     <property name="geometry">
      <rect>
       <x>480</x>
-      <y>180</y>
+      <y>190</y>
       <width>181</width>
       <height>25</height>
      </rect>
@@ -137,14 +137,14 @@
    <widget class="QLabel" name="sizeLabel">
     <property name="geometry">
      <rect>
-      <x>490</x>
+      <x>480</x>
       <y>240</y>
-      <width>151</width>
+      <width>181</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Array Size&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Array Size&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QRadioButton" name="radio34_10_4">
@@ -252,6 +252,19 @@
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;[Index for insertion is random]&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="certificationButton">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>140</y>
+      <width>181</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Course Certification</string>
     </property>
    </widget>
   </widget>

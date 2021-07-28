@@ -18,7 +18,12 @@ SOURCES += \
     searching/searchingresult.cpp \
     searching/searchingwindow.cpp \
     sorting/sortingresult.cpp \
-    sorting/sortingwindow.cpp
+    sorting/sortingwindow.cpp \
+    visualizer/visualwindow.cpp \
+    visualizer/bheap.cpp \
+    visualizer/stack.cpp \
+    visualizer/queue.cpp \
+    visualizer/visualizer.cpp
 
 HEADERS += \
     deletion/deletionalgo.h \
@@ -38,7 +43,12 @@ HEADERS += \
     sorting/sortingalgo.h \
     sorting/sortingperform.h \
     sorting/sortingresult.h \
-    sorting/sortingwindow.h
+    sorting/sortingwindow.h \
+    visualizer/visualwindow.h \
+    visualizer/bheap.h \
+    visualizer/stack.h \
+    visualizer/queue.h \
+    visualizer/visualizer.h
 
 FORMS += \
     deletion/deletionresult.ui \
@@ -49,7 +59,11 @@ FORMS += \
     searching/searchingresult.ui \
     searching/searchingwindow.ui \
     sorting/sortingresult.ui \
-    sorting/sortingwindow.ui
+    sorting/sortingwindow.ui \
+    visualizer/visualwindow.ui \
+    visualizer/bheap.ui \
+    visualizer/stack.ui \
+    visualizer/queue.ui \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

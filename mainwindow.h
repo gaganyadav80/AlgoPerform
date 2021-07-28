@@ -6,6 +6,8 @@
 #include "insertion/insertionwindow.h"
 #include "deletion/deletionwindow.h"
 
+#include "visualizer/visualwindow.h"
+
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -22,24 +24,24 @@ public:
 
 private slots:
     void on_githubButton_clicked();
+    void on_dsaButton_clicked();
+    void on_certificationButton_clicked();
 
     void on_sortingButton_clicked();
-
     void on_searchingButton_clicked();
+    void on_insertionButton_clicked();
+    void on_deletionButton_clicked();
+    void on_visualButton_clicked();
 
     void on_radio10_3_clicked();
-
     void on_radio10_4_clicked();
-
     void on_radio22_10_4_clicked();
-
     void on_radio34_10_4_clicked();
-
     void on_spinBox_valueChanged(int arg1);
 
-    void on_insertionButton_clicked();
 
-    void on_deletionButton_clicked();
+
+
 
 private:
     Ui::MainWindow *ui;
@@ -47,5 +49,6 @@ private:
     SearchingWindow *searching;
     InsertionWindow *insertion;
     DeletionWindow *deletion;
+    VisualWindow visual;
 };
 #endif // MAINWINDOW_H

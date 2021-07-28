@@ -16,8 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->spinBox->setValue(var->getElement());
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow() {
     delete ui;
 }
 
@@ -43,9 +42,14 @@ void MainWindow::on_spinBox_valueChanged(int arg1) {
 }
 
 
-void MainWindow::on_githubButton_clicked()
-{
+void MainWindow::on_githubButton_clicked() {
     QDesktopServices::openUrl(QUrl("https://github.com/gaganyadav80/AlgoPerform", QUrl::TolerantMode));
+}
+void MainWindow::on_dsaButton_clicked() {
+    QDesktopServices::openUrl(QUrl("https://practice.geeksforgeeks.org/courses/dsa-self-paced", QUrl::TolerantMode));
+}
+void MainWindow::on_certificationButton_clicked() {
+    QDesktopServices::openUrl(QUrl("https://drive.google.com/file/d/1NWGDVov9QlVjdYv8d_n8rcT2CPh0t5VT/view?usp=sharing", QUrl::TolerantMode));
 }
 
 
@@ -74,5 +78,10 @@ void MainWindow::on_deletionButton_clicked()
 {
     deletion = new DeletionWindow(this);
     deletion->show();
+}
+
+void MainWindow::on_visualButton_clicked()
+{
+    visual.show();
 }
 
