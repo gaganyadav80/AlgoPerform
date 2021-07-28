@@ -13,7 +13,196 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="closeButton">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>10</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(246, 97, 81);</string>
+    </property>
+    <property name="text">
+     <string>Close</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>171</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;DELETION&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>661</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="usesScrollButtons">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Array</string>
+     </attribute>
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>641</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Fira Sans Semi-Light'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Time Complexity&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt; in worst case of this insertion operation can be linear i.e. O(N) as we might have to shift all of the elements by one place to the left.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;1. To delete a given element from an array, we will have to first search the element in the array. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;2. If the element is present in the array then delete operation is performed for the element otherwise the user is notified that the array does not contains the given element.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Deleting an element K from the array arr[]&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;: Search the element K in the array arr[] to find the index at which it is present. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:142.857%; background-color:#e0e0e0;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','monospace'; font-size:15px; color:rgba(0,0,0,0.894118); background-color:#e0e0e0;&quot;&gt;for(i = 0; i &amp;lt; N; i++)&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','monospace'; font-size:15px; color:rgba(0,0,0,0.894118);&quot;&gt;&lt;br /&gt;{&lt;br /&gt;    if(arr[i] == K)&lt;br /&gt;        idx = i; return;&lt;br /&gt;    else&lt;br /&gt;        Element not Found;&lt;br /&gt;}&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;Now, to delete the element present at index &lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;idx&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;, left shift all of the elements present after &lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-style:italic; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;idx&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt; by one place and finally reduce the length of the array by 1. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:142.857%; background-color:#e0e0e0;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','monospace'; font-size:15px; color:rgba(0,0,0,0.894118); background-color:#e0e0e0;&quot;&gt;for(i = idx+1; i &amp;lt; len; i++)&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','monospace'; font-size:15px; color:rgba(0,0,0,0.894118);&quot;&gt;&lt;br /&gt;{&lt;br /&gt;    arr[i-1] = arr[i];&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;len = len-1;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Binary Tree</string>
+     </attribute>
+     <widget class="QTextBrowser" name="textBrowser_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>641</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Fira Sans Semi-Light'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Time Complexity: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;O(N)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;That is, given a Binary Search Tree and a node to be deleted. The task is to search that node in the given BST and delete it from the BST if it is present. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216); background-color:#ffffff;&quot;&gt;When we delete a node, three cases may arise: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ol style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px; font-weight:696; font-style:italic;&quot;&gt;Node to be deleted is leaf:&lt;/span&gt;&lt;span style=&quot; font-size:16px;&quot;&gt; Simply remove from the tree.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px; font-weight:696; font-style:italic;&quot;&gt;Node to be deleted has only one child:&lt;/span&gt;&lt;span style=&quot; font-size:16px;&quot;&gt; Copy the child to the node and delete the child.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px; font-weight:696; font-style:italic;&quot;&gt;Node to be deleted has two children:&lt;/span&gt;&lt;span style=&quot; font-size:16px; font-weight:696;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:16px;&quot;&gt;Find inorder successor of the node. Copy contents of the inorder successor to the node and delete the inorder successor. Note that inorder predecessor can also be used.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Linked Lists</string>
+     </attribute>
+     <widget class="QTextBrowser" name="textBrowser_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>641</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Fira Sans Semi-Light'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;The &lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216);&quot;&gt;time complexity&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt; of this operation in worst case is O(N) where N is the number of nodes in the Linked List.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216);&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; font-weight:696; color:rgba(0,0,0,0.839216);&quot;&gt;Deleting the first occurrence of a given data value:&lt;/span&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt; Deleting a node by its value can be done by traversing the list till the node just before the node with the value as the given key. Once the node just before the node to be deleted is found. Update its next pointer to point to the next of its next node.&lt;br /&gt;&lt;br /&gt;That is:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;1. Find previous node of the node to be deleted.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;2. Change the next of previous node.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;3. Free memory for the node to be deleted.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;Below is the implementation of this approach:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:2; text-indent:0px; font-family:'Nunito','sans-serif'; font-size:16px; color:rgba(0,0,0,0.839216);&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#236e24;&quot;&gt;/* Given a reference (pointer to pointer) to the head of a list &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#236e24;&quot;&gt;and a key, deletes the first occurrence of key in linked list */&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#930f80;&quot;&gt;void&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; deleteNode(&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#930f80;&quot;&gt;struct&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; Node &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;**&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;head_ref, &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#930f80;&quot;&gt;int&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; key) &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;{ &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#236e24;&quot;&gt;    // Store head node &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#930f80;&quot;&gt;    struct&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; Node&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;*&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; temp &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;*&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;head_ref, &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;*&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;prev; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:2; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;  &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#236e24;&quot;&gt;    // If head node itself holds the key to be deleted &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#930f80;&quot;&gt;    if&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; (temp &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;!=&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#585cf6;&quot;&gt;NULL&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; temp&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;data &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;==&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; key) { &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;        *&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;head_ref &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; temp&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;next;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#3c4c72;&quot;&gt;        free&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;(temp);&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#930f80;&quot;&gt;        return&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;    } &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:2; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;  &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#236e24;&quot;&gt;    // Search for the key to be deleted, keep track of the &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#236e24;&quot;&gt;    // previous node as we need to change 'prev-&amp;gt;next' &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#930f80;&quot;&gt;    while&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; (temp &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;!=&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#585cf6;&quot;&gt;NULL&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; temp&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;data &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;!=&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; key) { &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;        prev &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; temp; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;        temp &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; temp&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;next; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:1; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;} &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:2; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;  &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#236e24;&quot;&gt;// If key was not present in linked list &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#930f80;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; (temp &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;==&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#585cf6;&quot;&gt;NULL&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;) &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#930f80;&quot;&gt;return&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:2; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;  &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#236e24;&quot;&gt;// Unlink the node from linked list &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;    prev&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;next &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt; temp&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#687687;&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;next; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#3c4c72;&quot;&gt;free&lt;/span&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;(temp);&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:4px; margin-right:4px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace'; font-size:17px; color:#000000;&quot;&gt;}&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="startButton">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>10</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(143, 240, 164);</string>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
+   </widget>
+  </widget>
  </widget>
  <resources/>
  <connections/>

@@ -25,29 +25,29 @@ void InsertionWindow::on_closeButton_clicked()
     this->close();
 }
 
-QChartView* generateInsertionResultChart(unordered_map<string, int> map);
+QChartView* generateInsertionResultChart(unordered_map<string, int> insertMap);
 
 void InsertionWindow::on_startButton_clicked()
 {
-    unordered_map<string, int> insertionResults = execInsertionPerform();
-    cout<<endl<<"generating searching chart"<<endl;
-    QChartView* chartView = generateInsertionResultChart(insertionResults);
+    unordered_map<string, int> insertResults = execInsertionPerform();
+    cout<<endl<<"generating insertion chart"<<endl;
+    QChartView* chartView = generateInsertionResultChart(insertResults);
 
     insertionResult =new InsertionResult(this);
     insertionResult->setCentralWidget(chartView);
     insertionResult->show();
 }
 
-QChartView* generateInsertionResultChart(unordered_map<string, int> insertionMap) {
+QChartView* generateInsertionResultChart(unordered_map<string, int> insertMap) {
     QBarSet *set0 = new QBarSet("Array Insertion at random Index");
     QBarSet *set1 = new QBarSet("Linked list insertion at end");
     QBarSet *set2 = new QBarSet("BST insertion at end");
 
-    cout<<"Insertion Results = "<<insertionMap["instarray"]<<" "<<insertionMap["instllist"]<<" "<<insertionMap["instbst"]<<endl;
+    cout<<"Insertion Results = "<<insertMap["instarray"]<<" "<<insertMap["instllist"]<<" "<<insertMap["instbst"]<<endl;
 
-    *set0 << insertionMap["instarray"];
-    *set1 << insertionMap["instllist"];
-    *set2 << insertionMap["instbst"];
+    *set0 << insertMap["instarray"];
+    *set1 << insertMap["instllist"];
+    *set2 << insertMap["instbst"];
 
     QBarSeries *series = new QBarSeries();
     series->setLabelsVisible(true);

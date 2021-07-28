@@ -24,7 +24,7 @@ void SearchingWindow::on_closeButton_clicked() {
     this->close();
 }
 
-QChartView* generateSearchingResultChart(unordered_map<string, int> map);
+QChartView* generateSearchingResultChart(unordered_map<string, int> searchMap);
 
 void SearchingWindow::on_startButton_clicked()
 {

@@ -69,3 +69,10 @@ void MainWindow::on_insertionButton_clicked()
     insertion->show();
 }
 
+
+void MainWindow::on_deletionButton_clicked()
+{
+    deletion = new DeletionWindow(this);
+    deletion->show();
+}
+

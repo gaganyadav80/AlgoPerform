@@ -4,6 +4,7 @@
 #include "sorting/sortingwindow.h"
 #include "searching/searchingwindow.h"
 #include "insertion/insertionwindow.h"
+#include "deletion/deletionwindow.h"
 
 #include <QMainWindow>
 
@@ -38,10 +39,13 @@ private slots:
 
     void on_insertionButton_clicked();
 
+    void on_deletionButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     SortingWindow *sorting;
     SearchingWindow *searching;
     InsertionWindow *insertion;
+    DeletionWindow *deletion;
 };
 #endif // MAINWINDOW_H

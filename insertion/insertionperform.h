@@ -11,14 +11,14 @@ using namespace std::chrono;
 
 unordered_map<string, int> execInsertionPerform() {
     Variables *var = Variables::getInstance();
-    unordered_map<string, int> insertionResults;
+    unordered_map<string, int> insertResults;
 
     //Array insertion at given index execution time
     auto timerStart = high_resolution_clock::now();
     insertArray(var->getArray(), var->getElement(), var->getIndex());
     auto timerStop = high_resolution_clock::now();
     auto timerDuration = duration_cast<microseconds>(timerStart - timerStop);
-    insertionResults["instarray"] = abs(timerDuration.count());
+    insertResults["instarray"] = abs(timerDuration.count());
     cout<<"\nArray insertion done"<<endl;
 
     //Linked list insertion at end execution time
@@ -26,7 +26,7 @@ unordered_map<string, int> execInsertionPerform() {
     insertLList(var->getListRoot(), var->getElement());
     timerStop = high_resolution_clock::now();
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
-    insertionResults["instllist"] = abs(timerDuration.count());
+    insertResults["instllist"] = abs(timerDuration.count());
     cout<<"Linked List done"<<endl;
 
     //Binary tree insertion execution time
@@ -34,10 +34,10 @@ unordered_map<string, int> execInsertionPerform() {
     insertBst(var->getBstRoot(), var->getElement());
     timerStop = high_resolution_clock::now();
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
-    insertionResults["instbst"] = abs(timerDuration.count());
+    insertResults["instbst"] = abs(timerDuration.count());
     cout<<"Binary Tree insertion done"<<endl;
 
-    return insertionResults;
+    return insertResults;
 }
 
 #endif // INSERTIONPERFORM_H

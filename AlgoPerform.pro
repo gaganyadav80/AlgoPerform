@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    deletion/deletionresult.cpp \
     deletion/deletionwindow.cpp \
     insertion/insertionresult.cpp \
     insertion/insertionwindow.cpp \
@@ -20,6 +21,9 @@ SOURCES += \
     sorting/sortingwindow.cpp
 
 HEADERS += \
+    deletion/deletionalgo.h \
+    deletion/deletionperform.h \
+    deletion/deletionresult.h \
     deletion/deletionwindow.h \
     globalvariable.h \
     insertion/insertionalgo.h \
@@ -37,6 +41,7 @@ HEADERS += \
     sorting/sortingwindow.h
 
 FORMS += \
+    deletion/deletionresult.ui \
     deletion/deletionwindow.ui \
     insertion/insertionresult.ui \
     insertion/insertionwindow.ui \
