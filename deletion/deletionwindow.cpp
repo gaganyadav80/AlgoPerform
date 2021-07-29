@@ -41,13 +41,13 @@ void DeletionWindow::on_startButton_clicked()
 QChartView* generateDeletionResultChart(unordered_map<string, int> insertMap) {
     QBarSet *set0 = new QBarSet("Array deletion");
     QBarSet *set1 = new QBarSet("Linked list deletion");
-    QBarSet *set2 = new QBarSet("BST deletion [value/100]");
+    QBarSet *set2 = new QBarSet("BST deletion [value/10]");
 
     cout<<"Insertion Results = "<<insertMap["delarray"]<<" "<<insertMap["delllist"]<<" "<<insertMap["delbst"]<<endl;
 
     *set0 << insertMap["delarray"];
     *set1 << insertMap["delllist"];
-    *set2 << insertMap["delbst"] * 100;
+    *set2 << insertMap["delbst"] * 10;
 
     QBarSeries *series = new QBarSeries();
     series->setLabelsVisible(true);
@@ -62,8 +62,18 @@ QChartView* generateDeletionResultChart(unordered_map<string, int> insertMap) {
 
     Variables *var = Variables::getInstance();
 
+    int yval = var->getSize() * 0.06;
+    switch(var->getSize()) {
+    case 1000:
+        yval = 100;
+        break;
+    case 34000:
+        yval = 1500;
+        break;
+    }
+
     QValueAxis *axisY = new QValueAxis();
-    axisY->setRange(0, var->getSize() * 0.06);
+    axisY->setRange(0, yval);
     axisY->applyNiceNumbers();
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisY);

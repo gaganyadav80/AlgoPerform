@@ -76,8 +76,21 @@ QChartView* generateSortingResultChart(unordered_map<string, int> umap) {
 
     Variables *var = Variables::getInstance();
 
+    int yval = 100 * var->getSize();
+    switch(var->getSize()) {
+    case 1000:
+        yval = 4000;
+        break;
+    case 34000:
+        yval = yval * 10;
+        break;
+    default:
+        yval = 100*var->getSize();
+        break;
+    }
+
     QValueAxis *axisY = new QValueAxis();
-    axisY->setRange(0, 100*var->getSize());
+    axisY->setRange(0, yval);
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisY);
 
