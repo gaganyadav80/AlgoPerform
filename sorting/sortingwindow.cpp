@@ -30,7 +30,8 @@ QChartView* generateSortingResultChart(unordered_map<string, int> map);
 void SortingWindow::on_startButton_clicked()
 {
     unordered_map<string, int> results = execSortingPerform();
-    cout<<endl<<"generating sorting chart"<<endl;
+//    cout<<endl<<"generating sorting chart"<<endl;
+    printLog("chart#0 Generate sorting algoperform chart");
     QChartView* chartView = generateSortingResultChart(results);
 
     sortingResult =new SortingResult(this);
@@ -45,8 +46,9 @@ QChartView* generateSortingResultChart(unordered_map<string, int> umap) {
     QBarSet *set3 = new QBarSet("Quick Sort");
     QBarSet *set4 = new QBarSet("Merge Sort");
 
-    cout<<"Sorting Results = "<<umap["insertion"]<<" "<<umap["bubble"]<<" "<<umap["selection"]<<" ";
-    cout<<umap["quick"]<<" "<<umap["merge"]<<endl;
+//    cout<<"Sorting Results = "<<umap["insertion"]<<" "<<umap["bubble"]<<" "<<umap["selection"]<<" ";
+//    cout<<umap["quick"]<<" "<<umap["merge"]<<endl;
+    printResult(umap, "Sorting");
 
     *set0 << umap["insertion"];
     *set1 << umap["bubble"];
@@ -79,7 +81,7 @@ QChartView* generateSortingResultChart(unordered_map<string, int> umap) {
     int yval = var->getSize();
     switch(var->getSize()) {
     case 1000:
-        yval = yval * 4;
+        yval = yval * 2;
         break;
     case 10000:
         yval = yval * 25;

@@ -30,7 +30,8 @@ QChartView* generateDeletionResultChart(unordered_map<string, int> umap);
 void DeletionWindow::on_startButton_clicked()
 {
     unordered_map<string, int> results = execDeletionPerform();
-    cout<<endl<<"generating deletion chart"<<endl;
+//    cout<<endl<<"generating deletion chart"<<endl;
+    printLog("chart#0 Generate deletion algoperform chart");
     QChartView* chartView = generateDeletionResultChart(results);
 
     deletionResult =new DeletionResult(this);
@@ -38,16 +39,17 @@ void DeletionWindow::on_startButton_clicked()
     deletionResult->show();
 }
 
-QChartView* generateDeletionResultChart(unordered_map<string, int> insertMap) {
+QChartView* generateDeletionResultChart(unordered_map<string, int> result) {
     QBarSet *set0 = new QBarSet("Array deletion");
     QBarSet *set1 = new QBarSet("Linked list deletion");
     QBarSet *set2 = new QBarSet("BST deletion [value*10]");
 
-    cout<<"Insertion Results = "<<insertMap["delarray"]<<" "<<insertMap["delllist"]<<" "<<insertMap["delbst"]<<endl;
+//    cout<<"Insertion Results = "<<result["delarray"]<<" "<<result["delllist"]<<" "<<result["delbst"]<<endl;
+    printResult(result, "Deletion");
 
-    *set0 << insertMap["delarray"];
-    *set1 << insertMap["delllist"];
-    *set2 << insertMap["delbst"] * 10;
+    *set0 << result["delarray"];
+    *set1 << result["delllist"];
+    *set2 << result["delbst"] * 10;
 
     QBarSeries *series = new QBarSeries();
     series->setLabelsVisible(true);

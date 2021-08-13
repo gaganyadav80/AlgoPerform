@@ -29,7 +29,8 @@ QChartView* generateSearchingResultChart(unordered_map<string, int> searchMap);
 void SearchingWindow::on_startButton_clicked()
 {
     unordered_map<string, int> searchResults = execSearchingPerform();
-    cout<<endl<<"generating searching chart"<<endl;
+//    cout<<endl<<"generating searching chart"<<endl;
+    printLog("chart#0 Generate searching algoperform chart");
     QChartView* chartView = generateSearchingResultChart(searchResults);
 
     searchingResult =new SearchingResult(this);
@@ -44,8 +45,9 @@ QChartView* generateSearchingResultChart(unordered_map<string, int> searchMap) {
     QBarSet *set3 = new QBarSet("BST Search [value*100]");
     QBarSet *set4 = new QBarSet("Linked List Search [value*10]");
 
-    cout<<"Searching Results = "<<searchMap["linear"]<<" "<<searchMap["binary"]<<" "<<searchMap["ternary"];
-    cout<<" "<<searchMap["bst"]<<" "<<searchMap["llist"]<<endl;
+//    cout<<"Searching Results = "<<searchMap["linear"]<<" "<<searchMap["binary"]<<" "<<searchMap["ternary"];
+//    cout<<" "<<searchMap["bst"]<<" "<<searchMap["llist"]<<endl;
+    printResult(searchMap, "Searching");
 
     *set0 << searchMap["linear"]*10;
     *set1 << searchMap["binary"];

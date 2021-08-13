@@ -59,7 +59,7 @@ unordered_map<string, int> execSortingPerform() {
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     sortingResults["merge"] = abs(timerDuration.count());
 //    cout<<"merge sort done"<<endl;
-    printLog("str#4: Array merge sort done");
+    printLog("srt#4: Array merge sort done");
 
     return sortingResults;
 }

@@ -30,7 +30,8 @@ QChartView* generateInsertionResultChart(unordered_map<string, int> insertMap);
 void InsertionWindow::on_startButton_clicked()
 {
     unordered_map<string, int> insertResults = execInsertionPerform();
-    cout<<endl<<"generating insertion chart"<<endl;
+//    cout<<endl<<"generating insertion chart"<<endl;
+    printLog("chart#0 Generate insertion algoperform chart");
     QChartView* chartView = generateInsertionResultChart(insertResults);
 
     insertionResult =new InsertionResult(this);
@@ -43,7 +44,8 @@ QChartView* generateInsertionResultChart(unordered_map<string, int> insertMap) {
     QBarSet *set1 = new QBarSet("Linked list insertion at end");
     QBarSet *set2 = new QBarSet("BST insertion at end [value*10]");
 
-    cout<<"Insertion Results = "<<insertMap["instarray"]<<" "<<insertMap["instllist"]<<" "<<insertMap["instbst"]<<endl;
+//    cout<<"Insertion Results = "<<insertMap["instarray"]<<" "<<insertMap["instllist"]<<" "<<insertMap["instbst"]<<endl;
+    printResult(insertMap, "Insertion");
 
     *set0 << insertMap["instarray"];
     *set1 << insertMap["instllist"];
