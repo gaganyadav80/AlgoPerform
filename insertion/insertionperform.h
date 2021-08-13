@@ -2,6 +2,7 @@
 #define INSERTIONPERFORM_H
 
 #include "insertionalgo.h"
+#include "debuglog.h"
 
 #include <chrono>
 #include <iostream>
@@ -19,7 +20,8 @@ unordered_map<string, int> execInsertionPerform() {
     auto timerStop = high_resolution_clock::now();
     auto timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     insertResults["instarray"] = abs(timerDuration.count());
-    cout<<"\nArray insertion done"<<endl;
+//    cout<<"\nArray insertion done"<<endl;
+    printLog("int#0: Array insertion done");
 
     //Linked list insertion at end execution time
     timerStart = high_resolution_clock::now();
@@ -27,7 +29,8 @@ unordered_map<string, int> execInsertionPerform() {
     timerStop = high_resolution_clock::now();
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     insertResults["instllist"] = abs(timerDuration.count());
-    cout<<"Linked List done"<<endl;
+//    cout<<"Linked List done"<<endl;
+    printLog("int#1: Linked list done");
 
     //Binary tree insertion execution time
     timerStart = high_resolution_clock::now();
@@ -35,7 +38,8 @@ unordered_map<string, int> execInsertionPerform() {
     timerStop = high_resolution_clock::now();
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     insertResults["instbst"] = abs(timerDuration.count());
-    cout<<"Binary Tree insertion done"<<endl;
+//    cout<<"Binary Tree insertion done"<<endl;
+    printLog("int#2: Binary search tree done");
 
     return insertResults;
 }

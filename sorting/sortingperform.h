@@ -3,6 +3,7 @@
 
 #include "sortingalgo.h"
 #include "globalvariable.h"
+#include "debuglog.h"
 
 #include <chrono>
 #include <iostream>
@@ -20,7 +21,8 @@ unordered_map<string, int> execSortingPerform() {
     auto timerStop = high_resolution_clock::now();
     auto timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     sortingResults["insertion"] = abs(timerDuration.count());
-    cout<<"Insertion sort done"<<endl;
+//    cout<<"Insertion sort done"<<endl;
+    printLog("srt#0: Array insertion sort done");
 
     //bubble sort execution time
     timerStart = high_resolution_clock::now();
@@ -28,7 +30,8 @@ unordered_map<string, int> execSortingPerform() {
     timerStop = high_resolution_clock::now();
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     sortingResults["bubble"] = abs(timerDuration.count());
-    cout<<"bubble sort done"<<endl;
+//    cout<<"bubble sort done"<<endl;
+    printLog("srt#1: Array bubble sort done");
 
     //selection sort execution time
     timerStart = high_resolution_clock::now();
@@ -36,7 +39,8 @@ unordered_map<string, int> execSortingPerform() {
     timerStop = high_resolution_clock::now();
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     sortingResults["selection"] = abs(timerDuration.count());
-    cout<<"selection sort done"<<endl;
+//    cout<<"selection sort done"<<endl;
+    printLog("srt#2: Array selection sort done");
 
     //quick sort execution time
     timerStart = high_resolution_clock::now();
@@ -44,7 +48,8 @@ unordered_map<string, int> execSortingPerform() {
     timerStop = high_resolution_clock::now();
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     sortingResults["quick"] = abs(timerDuration.count());
-    cout<<"quick sort done"<<endl;
+//    cout<<"quick sort done"<<endl;
+    printLog("srt#3: Array quick sort done");
 
 
     //merge sort execution time
@@ -53,7 +58,8 @@ unordered_map<string, int> execSortingPerform() {
     timerStop = high_resolution_clock::now();
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     sortingResults["merge"] = abs(timerDuration.count());
-    cout<<"merge sort done"<<endl;
+//    cout<<"merge sort done"<<endl;
+    printLog("str#4: Array merge sort done");
 
     return sortingResults;
 }

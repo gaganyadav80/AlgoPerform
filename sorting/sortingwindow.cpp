@@ -76,16 +76,22 @@ QChartView* generateSortingResultChart(unordered_map<string, int> umap) {
 
     Variables *var = Variables::getInstance();
 
-    int yval = 100 * var->getSize();
+    int yval = var->getSize();
     switch(var->getSize()) {
     case 1000:
-        yval = 4000;
+        yval = yval * 4;
+        break;
+    case 10000:
+        yval = yval * 25;
+        break;
+    case 22000:
+        yval = yval * 50;
         break;
     case 34000:
-        yval = yval * 10;
+        yval = yval * 75;
         break;
     default:
-        yval = 100*var->getSize();
+        yval = var->getSize();
         break;
     }
 

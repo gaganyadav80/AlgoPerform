@@ -38,11 +38,11 @@ void SearchingWindow::on_startButton_clicked()
 }
 
 QChartView* generateSearchingResultChart(unordered_map<string, int> searchMap) {
-    QBarSet *set0 = new QBarSet("Linear Search [value/10]");
+    QBarSet *set0 = new QBarSet("Linear Search [value*10]");
     QBarSet *set1 = new QBarSet("Binary Search");
     QBarSet *set2 = new QBarSet("Ternary Search");
-    QBarSet *set3 = new QBarSet("BST Search [value/10]");
-    QBarSet *set4 = new QBarSet("Linked List Search [value/10]");
+    QBarSet *set3 = new QBarSet("BST Search [value*100]");
+    QBarSet *set4 = new QBarSet("Linked List Search [value*10]");
 
     cout<<"Searching Results = "<<searchMap["linear"]<<" "<<searchMap["binary"]<<" "<<searchMap["ternary"];
     cout<<" "<<searchMap["bst"]<<" "<<searchMap["llist"]<<endl;
@@ -50,7 +50,7 @@ QChartView* generateSearchingResultChart(unordered_map<string, int> searchMap) {
     *set0 << searchMap["linear"]*10;
     *set1 << searchMap["binary"];
     *set2 << searchMap["ternary"];
-    *set3 << searchMap["bst"]*10;
+    *set3 << searchMap["bst"]*100;
     *set4 << searchMap["llist"]*10;
 
     QBarSeries *series = new QBarSeries();
@@ -75,19 +75,19 @@ QChartView* generateSearchingResultChart(unordered_map<string, int> searchMap) {
 
     Variables *var = Variables::getInstance();
 
-    int yval = var->getSize();
+    int yval = 0;
     switch(var->getSize()) {
     case 1000:
-        yval = 2000;
+        yval = 200;
         break;
     case 10000:
-        yval = 25000;
+        yval = 1000;
         break;
     case 22000:
-        yval = 40000;
+        yval = 2500;
         break;
     case 34000:
-        yval = 45000;
+        yval = 3500;
         break;
     }
 

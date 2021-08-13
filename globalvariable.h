@@ -1,7 +1,10 @@
 #ifndef GLOBALVARIABLE_H
 #define GLOBALVARIABLE_H
 
+//#include "debuglog.h"
+
 #include <bits/stdc++.h>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -113,9 +116,9 @@ class Variables {
        fillArray();
        fillBST();
        fillLList();
-       cout<<"\nRoot node value "<<bstroot->key<<endl;
-       cout<<"Array filled with new size of "<<size<<endl;
-       cout<<"Binary Tree filled with new size of "<<size<<endl<<endl;
+//       cout<<"\nRoot node value "<<bstroot->key<<endl;
+//       cout<<"Array filled with new size of "<<size<<endl;
+//       cout<<"Binary Tree filled with new size of "<<size<<endl<<endl;
    }
 
    int getElement() {
@@ -123,7 +126,7 @@ class Variables {
    }
    void setElement(int e) {
        element = e;
-       cout<<"New element to be searched is "<<element<<endl;
+//       cout<<"New element to be searched is "<<element<<endl;
    }
 
    int getIndex() {

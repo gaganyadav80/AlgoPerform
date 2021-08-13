@@ -41,7 +41,7 @@ void InsertionWindow::on_startButton_clicked()
 QChartView* generateInsertionResultChart(unordered_map<string, int> insertMap) {
     QBarSet *set0 = new QBarSet("Array Insertion at random Index");
     QBarSet *set1 = new QBarSet("Linked list insertion at end");
-    QBarSet *set2 = new QBarSet("BST insertion at end [value/10]");
+    QBarSet *set2 = new QBarSet("BST insertion at end [value*10]");
 
     cout<<"Insertion Results = "<<insertMap["instarray"]<<" "<<insertMap["instllist"]<<" "<<insertMap["instbst"]<<endl;
 
@@ -69,10 +69,19 @@ QChartView* generateInsertionResultChart(unordered_map<string, int> insertMap) {
 
     Variables *var = Variables::getInstance();
 
-    int yval = var->getSize() * 0.053;
+    int yval = 0;
     switch(var->getSize()) {
     case 1000:
         yval = 100;
+        break;
+    case 10000:
+        yval = 150;
+        break;
+    case 22000:
+        yval = 200;
+        break;
+    case 34000:
+        yval = 300;
         break;
     }
 

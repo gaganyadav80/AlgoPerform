@@ -2,6 +2,7 @@
 #define DELETIONPERFORM_H
 
 #include "deletionalgo.h"
+#include "debuglog.h"
 
 #include <chrono>
 #include <iostream>
@@ -19,7 +20,8 @@ unordered_map<string, int> execDeletionPerform() {
     auto timerStop = high_resolution_clock::now();
     auto timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     results["delarray"] = abs(timerDuration.count());
-    cout<<"\nArray deletion of element done"<<endl;
+//    cout<<"\nArray deletion of element done"<<endl;
+    printLog("del#0: Array deletion done");
 
     //Linked list deletion execution time
     timerStart = high_resolution_clock::now();
@@ -27,7 +29,8 @@ unordered_map<string, int> execDeletionPerform() {
     timerStop = high_resolution_clock::now();
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     results["delllist"] = abs(timerDuration.count());
-    cout<<"Linked List deletion done"<<endl;
+//    cout<<"Linked List deletion done"<<endl;
+    printLog("del#1: Linked list done");
 
     //Binary tree deletion execution time
     timerStart = high_resolution_clock::now();
@@ -35,7 +38,8 @@ unordered_map<string, int> execDeletionPerform() {
     timerStop = high_resolution_clock::now();
     timerDuration = duration_cast<microseconds>(timerStart - timerStop);
     results["delbst"] = abs(timerDuration.count());
-    cout<<"Binary Tree deletion done"<<endl;
+//    cout<<"Binary Tree deletion done"<<endl;
+    printLog("del#2: binary search tree done");
 
     return results;
 }
